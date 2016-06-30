@@ -1,0 +1,37 @@
+/* put your css here */
+:local .container {
+  width: 1000px;
+  height: inherit;
+
+  border: 1px solid #ddd;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+:local .container .content {
+  padding: 10px;
+}
+:local .container .content .title {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  line-height: 50px;
+  border-bottom: 1px solid #eee;
+  background-color: #86B0DE;
+}
+:local .container .content .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
