@@ -73,10 +73,10 @@ class AgGridWrapper extends Component {
         style={configurableStyles}
       >
         <div className={styles.content}>
-          <div className={styles.title}>标题</div>
+          <div className={styles.title}>{title}</div>
           <div className={styles.buttons}>
-            <MDButton onClick={this.onRowAdded}>新增</MDButton>
-            <MDButton onClick={this.onRowDeleted}>删除</MDButton>
+            <MDButton onClick={this.onRowAdded}>Add</MDButton>
+            <MDButton onClick={this.onRowDeleted}>Delete</MDButton>
           </div>
           <AgGridReact
             onGridReady={this.onGridReady}

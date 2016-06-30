@@ -5,6 +5,7 @@ import { columnDefs, rowData } from './src/testdata';
 const App = () => (
   <div>
     <AgGridWrapper
+      title="Athletes"
       columnDefs={columnDefs}
       data={rowData}
     />
