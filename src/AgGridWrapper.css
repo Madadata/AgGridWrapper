@@ -1,6 +1,5 @@
-/* put your css here */
 :local .container {
-  width: 1000px;
+  width: inherit;
   height: inherit;
 
   border: 1px solid #ddd;

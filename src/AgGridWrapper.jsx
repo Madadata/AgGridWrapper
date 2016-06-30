@@ -26,6 +26,10 @@ class AgGridWrapper extends Component {
     });
   }
 
+  componentDidMount() {
+    this.api.sizeColumnsToFit();
+  }
+
   componentWillUnmount() {
     this.api.destroy();
   }
@@ -61,8 +65,13 @@ class AgGridWrapper extends Component {
 
   render() {
     const { rowData, columnDefs } = this.state;
+    const { title, width, height } = this.props;
+    const configurableStyles = { width, height };
     return(
-      <div className={classNames('ag-blue', styles.container)}>
+      <div
+        className={classNames('ag-blue', styles.container)}
+        style={configurableStyles}
+      >
         <div className={styles.content}>
           <div className={styles.title}>标题</div>
           <div className={styles.buttons}>
@@ -89,8 +98,11 @@ class AgGridWrapper extends Component {
 }
 
 AgGridWrapper.propTypes = {
+  title: PropTypes.string,
   data: PropTypes.arrayOf(PropTypes.object),
   columnDefs: PropTypes.arrayOf(PropTypes.object),
+  width: PropTypes.number,
+  height: PropTypes.number,
 };
 
 export default AgGridWrapper;
